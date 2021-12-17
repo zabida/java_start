@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--内部bean-->
+    <!--    <bean id="emp" class="com.atguigu.spring5.bean.Emp">-->
+    <!--        <property name="name" value="wu zun"/>-->
+    <!--        <property name="age" value="18"/>-->
+    <!--        <property name="dep">-->
+    <!--            <bean class="com.atguigu.spring5.bean.Dep">-->
+    <!--                <property name="name" value="研发"/>-->
+    <!--                <property name="leader" value="long"/>-->
+    <!--            </bean>-->
+    <!--        </property>-->
+    <!--    </bean>-->
+    <bean id="emp" class="com.atguigu.spring5.bean.Emp">
+        <property name="name" value="wu zun"/>
+        <property name="age" value="18"/>
+        <property name="dep" ref="dep"/>
+        <property name="dep.name" value="研发中心"/>
+    </bean>
+    <bean id="dep" class="com.atguigu.spring5.bean.Dep">
+    </bean>
+</beans>

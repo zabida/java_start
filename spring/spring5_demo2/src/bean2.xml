@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="book1" class="com.atguigu.spring5.collections.Book">
+        <property name="name" value="第一本"/>
+    </bean>
+
+    <bean id="book2" class="com.atguigu.spring5.collections.Book">
+        <property name="name" value="第二本书"/>
+    </bean>
+
+    <util:list id="bookLi">
+        <value>第一本</value>
+        <value>第二本</value>
+        <value>第三本</value>
+    </util:list>
+
+    <bean id="course" class="com.atguigu.spring5.collections.Course">
+        <property name="book" ref="bookLi"/>
+        <property name="boolList" ref="bookLi"/>
+        <property name="books">
+            <list>
+                <ref bean="book1"/>
+                <ref bean="book2"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>

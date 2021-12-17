@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user" class="com.atguigu.spring5.User" name="user2"/>
+    <bean id="book" class="com.atguigu.spring5.Book">
+        <property name="author" value="海明威"/>
+        <property name="name" value="老人与海"/>
+    </bean>
+
+    <bean id="book2" class="com.atguigu.spring5.Book" p:author="大神" p:name="老人英语"/>
+
+    <bean id="book3" class="com.atguigu.spring5.Book">
+        <property name="name">
+            <value><![CDATA[<<南京网红>>]]></value>
+        </property>
+        <property name="author">
+            <null/>
+        </property>
+    </bean>
+
+    <bean id="order" class="com.atguigu.spring5.Order">
+        <constructor-arg name="address" value="323"/>
+        <constructor-arg name="name" value="东方"/>
+    </bean>
+</beans>

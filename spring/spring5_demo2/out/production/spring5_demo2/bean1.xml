@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="stu" class="com.atguigu.spring5.collections.Stu">
+        <property name="courses">
+            <array>
+                <value>java课程</value>
+                <value>python课程</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>张山</value>
+                <value>李斯</value>
+            </list>
+        </property>
+        <property name="maps">
+            <map>
+                <entry key="Java" value="java"/>
+                <entry key="php" value="p"/>
+            </map>
+        </property>
+        <property name="sets">
+            <set>
+                <value>意思</value>
+                <value>激励</value>
+            </set>
+        </property>
+    </bean>
+</beans>
