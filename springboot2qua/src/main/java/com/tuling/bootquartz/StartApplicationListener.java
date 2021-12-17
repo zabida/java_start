@@ -17,7 +17,7 @@ public class StartApplicationListener implements ApplicationListener<ContextRefr
     @SneakyThrows
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        TriggerKey triggerKey = TriggerKey.triggerKey("trgger1", "group1");
+        TriggerKey triggerKey = TriggerKey.triggerKey("trigger1", "group1");
         Trigger trigger = scheduler.getTrigger(triggerKey);
         if (trigger == null) {
             trigger = TriggerBuilder.newTrigger()

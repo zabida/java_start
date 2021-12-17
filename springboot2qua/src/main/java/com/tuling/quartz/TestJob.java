@@ -16,7 +16,9 @@ public class TestJob {
                 .usingJobData("trigger", "trigger")
                 .startNow()
                 .withSchedule(
-                        SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(1).repeatForever()
+                        SimpleScheduleBuilder.simpleSchedule()
+//                                .withIntervalInMinutes(1)
+                                .withIntervalInSeconds(3).withRepeatCount(4)
                 )
                 .build();
         try{
