@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://8.129.121.170:13307/rbac
+    type: com.alibaba.druid.pool.DruidDataSource
+
+#spring:
+#  datasource:
+#    druid:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://8.129.121.170:13307/rbac
+#      username: root
+#      password: 123456

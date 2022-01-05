@@ -1,0 +1,32 @@
+server:
+  port: 8081
+
+hobby: dance
+
+country:
+  game: ha
+  music: los
+
+# 列表的两种写法
+users1: [{name: zhangsan, age: 18}, {name: lisi, age: 20}]
+users:
+  - name: zhangsan
+    age: 18
+  - name: lisi
+    age: 20
+
+# 加- 表示数组
+datasource:
+  driver: hhh
+  url: http://hgahsjs
+  username: root
+  password:
+    - qwehhh
+    - 123as
+
+
+baseDir: c:\windows
+
+tempDir: ${baseDir}\temp
+# 使用引号其中的转义字符可以生效
+tempDir1: "${baseDir}\temp"  # \t会变成制表位

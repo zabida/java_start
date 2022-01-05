@@ -1,0 +1,5 @@
+div异常
+异常名称:ArithmeticException
+异常原因:/ by zero
+=====================
+一共出现1次异常
