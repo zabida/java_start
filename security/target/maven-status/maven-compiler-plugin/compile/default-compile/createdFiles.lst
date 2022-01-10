@@ -1,0 +1,9 @@
+org\mvcsecurity\security\config\ApplicationConfig.class
+org\mvcsecurity\security\service\AuthenticationServiceImpl.class
+org\mvcsecurity\security\init\SpringApplicationInitializer.class
+org\mvcsecurity\security\config\WebConfig.class
+org\mvcsecurity\security\service\AuthenticationService.class
+org\mvcsecurity\security\controller\LoginController.class
+org\mvcsecurity\security\model\UserDto.class
+org\mvcsecurity\security\interceptor\SimpleAuthenticationInterceptor.class
+org\mvcsecurity\security\model\AuthenticationRequest.class
