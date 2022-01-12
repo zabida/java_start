@@ -1,0 +1,11 @@
+server:
+  port: 8081
+logging:
+  pattern:
+    console: "%d %clr(%5p)--[%16t] %clr(%-40.40c){cyan} : %m %n"
+  file:
+    name: server.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      file-name-pattern: server.%d{yyyyMMdd}.%i.log

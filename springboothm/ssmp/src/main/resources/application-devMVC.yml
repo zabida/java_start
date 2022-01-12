@@ -1,0 +1,4 @@
+server:
+  servlet:
+    context-path: /bank
+  port: 8085
