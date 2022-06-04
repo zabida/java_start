@@ -46,6 +46,6 @@ public class TcpServer extends Thread{
 
     public static void main(String[] args) throws IOException {
         TcpServer tcpServer = new TcpServer(1234);
-        tcpServer.run();
+        tcpServer.start();
     }
 }

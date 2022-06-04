@@ -17,9 +17,9 @@ import org.springframework.context.annotation.ComponentScan;
 public class MainApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(MainApplication.class, args);
-        for (String name : run.getBeanDefinitionNames()) {
-            System.out.println(name);
-        }
-        run.getBean("tom", Pet.class);
+//        for (String name : run.getBeanDefinitionNames()) {
+//            System.out.println(name);
+//        }
+//        run.getBean("tom", Pet.class);
     }
 }
