@@ -1,4 +1,4 @@
-package com.at.fix;
+package com.at.base;
 
 import java.util.Scanner;
 

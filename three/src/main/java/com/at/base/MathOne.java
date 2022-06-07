@@ -1,4 +1,4 @@
-package com.at.fix;
+package com.at.base;
 
 public class MathOne {
     public static void main(String[] args) {
