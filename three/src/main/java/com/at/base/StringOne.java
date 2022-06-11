@@ -98,4 +98,15 @@ public class StringOne {
         System.out.println("_________________");
         one.scannerFile(rPath);
     }
+    public void compare(){
+        String str8 = "";
+        long freeMemory = Runtime.getRuntime().freeMemory();  // 获取当前系统剩余内存
+        long now = System.currentTimeMillis();
+        for (int i = 0; i < 5000; i++) {
+            str8 = str8 + i; // 相当于产生5000个对象
+        }
+        long freeMemory1 = Runtime.getRuntime().freeMemory();
+        long curr = freeMemory1 - freeMemory;
+        System.out.println("使用内存" + (curr - now));
+    }
 }
