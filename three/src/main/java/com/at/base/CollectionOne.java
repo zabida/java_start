@@ -22,17 +22,24 @@ public class CollectionOne {
         System.out.println(Arrays.toString(s3));
 
         ArrayList<String> s4 = new ArrayList<>();
+        s4.add("s4_4");
         s4.add("s4_1");
-        s4.add("s4_2");
         s4.add("s4_3");
-        System.out.println(s4);
+        Collections.sort(s4);  // 排序
+        System.out.println("s4 排列后" + s4);
+        List<String> strings = Collections.checkedList(s4, String.class);
+        System.out.println("strings is" + strings);
+
 
         ArrayList<String> s5 = new ArrayList<>();
         s5.add("s5_1");
         s5.add("s5_2");
         s5.addAll(s4);
-        System.out.println(s5.size());
+        Collections.reverse(s5);  // 翻转
+        System.out.println("s5 is " + s5);
 
+        Collections.fill(s5, "11");  // 重新填充，全部替换填充为 11
+        System.out.println("s5 is" + s5);
         List<String> li1 = Arrays.asList("li_1", "li_2", "li_3");
         // 不可以用add，这个生成的是不可变长的列表，返回的是final，注意
 //        li1.add("s1");

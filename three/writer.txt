@@ -1,0 +1,122 @@
+尚学堂旗下高端品牌：速学堂百战程序员当前访客身份： 游客 [登录 | 注册加入速学堂]
+实战化教学领导品牌
+首页Java 实战教程系列Java面试题集Tomcat视频教程Oracle+MySQLAWTJava.lang教程Java.math包
+第一章 Java入门
+第二章 数据类型和运算符
+第三章 控制语句
+第四章 Java面向对象基础
+第五章 Java面向对象进阶
+第六章 异常机制
+第七章 数组
+第八章 常用类
+第九章 容器
+第十章 IO技术
+ 10.1 基本概念和IO入门
+ 10.1.1 数据源
+ 10.1.2 流的概念
+ 10.1.3 第一个简单的IO流程序及深入理解
+ 10.1.4 Java中流的概念细分
+ 10.1.5 Java中IO流类的体系
+ 10.1.6 四大IO抽象类
+ 10.2.1 文件字节流
+ 10.2.2 文件字符流
+ 10.2.3 缓冲字节流
+ 10.2.4 缓冲字符流
+ 10.2.5 字节数组流
+ 10.2.6 数据流
+ 10.2.7 对象流
+ 10.2.8 转换流
+ 10.3.1 序列化和反序列化是什么
+ 10.3.2 序列化涉及的类和接口
+ 10.3.3 序列化/反序列化的步骤和实例
+ 10.4.1 装饰器模式简介
+ 10.4.2 IO流体系中的装饰器模式
+ 10.5 Apache IOUtils和FileUtils的使用
+ 10.5.1 Apache基金会介绍
+ 10.5.2 FileUtils的妙用
+ 10.5.3 IOUtils的妙用
+ 第十章 总结
+ 第十章 作业
+第十一章 多线程技术
+第十二章 网络编程
+第十三章 J20飞机游戏项目(手把手教)
+10.2.2 文件字符流
+
+
+
+【专业IT培训机构,真正零首付入学www.bjsxt.com】
+
+
+
+      前面介绍的文件字节流可以处理所有的文件，但是字节流不能很好的处理Unicode字符，经常会出现“乱码”现象。所以，我们处理文本文件，一般可以使用文件字符流，它以字符为单位进行操作。
+
+【示例10-6】使用FileReader与FileWriter实现文本文件的复制
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+public class TestFileCopy2 {
+    public static void main(String[] args) {
+        // 写法和使用Stream基本一样。只不过，读取时是读取的字符。
+        FileReader fr = null;
+        FileWriter fw = null;
+        int len = 0;
+        try {
+            fr = new FileReader("d:/a.txt");
+            fw = new FileWriter("d:/d.txt");
+            //为了提高效率，创建缓冲用的字符数组
+            char[] buffer = new char[1024];
+            //边读边写
+            while ((len = fr.read(buffer)) != -1) {
+                fw.write(buffer, 0, len);
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (fw != null) {
+                    fw.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                if (fr != null) {
+                    fr.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+      执行结果如图10-11和图10-12所示：
+
+图10-11 示例10-6运行后d盘部分目录.png
+
+图10-11 示例10-6运行后d盘部分目录
+
+图10-12 d.txt文件的内容.png
+
+图10-12 d.txt文件的内容
+
+分享到：0评论
+
+Please enter a comment…
+评论
+分类导航
+尚学堂：
+
+JavaEE培训大数据就业班培训大数据云计算周末班培训零基础大数据连读班培训大数据云计算高手班培训人工智能周末班培训Python全栈就业班Web前端+移动端培训
+友情链接：尚学堂java1234上海尚学堂编程学习网asp.net源码1401软件安全16Aspx培训学校管理系统编程入门自学php网新东方英语合肥拓展训练公司技术拉近你我B5教程网长沙企业培训北京英孚教育C/C++学习上海精锐教育php自学网程序员客栈极速数据C++技术网
+申请友链或广告合作 联系QQ：397022857
+
+北京总部地址：北京市海淀区西三旗街道建材城西路中腾建华商务大厦东侧二层尚学堂
+咨询电话：400-009-1906 010-56233821
+网站维护：北京尚学堂科技有限公司昌平分公司
+Copyright 2007-2015 北京尚学堂科技有限公司
+京ICP备13018289号-1 京公网安备11010802015183

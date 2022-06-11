@@ -107,6 +107,17 @@ public class StringOne {
         }
         long freeMemory1 = Runtime.getRuntime().freeMemory();
         long curr = freeMemory1 - freeMemory;
-        System.out.println("使用内存" + (curr - now));
+        System.out.println("使用内存" + curr);
+
+
+        StringBuilder builder = new StringBuilder("");
+        long freeMemory2 = Runtime.getRuntime().freeMemory();
+        long now2 = System.currentTimeMillis();
+        for (int i = 0; i < 5000; i++) {
+            builder.append(i);
+        }
+        long freeMemory3 = Runtime.getRuntime().freeMemory();
+        long l = freeMemory3 - freeMemory2;
+        System.out.println("使用内存" + l);
     }
 }
