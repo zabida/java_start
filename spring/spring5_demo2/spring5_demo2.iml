@@ -13,7 +13,10 @@
           <root url="jar://$MODULE_DIR$/lib/spring-beans-5.3.13.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.ideaLibSources/spring-beans-5.3.13-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.ideaLibSources/spring-beans-5.3.13-sources.jar!/" />
+        </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -31,7 +34,10 @@
           <root url="jar://$MODULE_DIR$/lib/spring-context-5.3.13.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.ideaLibSources/spring-context-5.3.13-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.ideaLibSources/spring-context-5.3.13-sources.jar!/" />
+        </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">

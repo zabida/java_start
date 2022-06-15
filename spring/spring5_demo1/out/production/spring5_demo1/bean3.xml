@@ -20,5 +20,7 @@
         <property name="dep.name" value="研发中心"/>
     </bean>
     <bean id="dep" class="com.atguigu.spring5.bean.Dep">
+<!--        <property name="name" value="hehe"/>-->
+<!--        <property name="leader" value="long"/>-->
     </bean>
 </beans>
