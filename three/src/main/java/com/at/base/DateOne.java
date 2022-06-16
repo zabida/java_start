@@ -9,7 +9,9 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjuster;
 import java.time.temporal.TemporalAdjusters;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class DateOne {
     public void trans() throws ParseException {
@@ -26,6 +28,8 @@ public class DateOne {
         // SimpleDateFormat线程不安全
 
         //使用LocalDatetime
+        DateTimeFormatter ofPattern = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime parse = LocalDateTime.parse("2022-06-10 13:21:10", ofPattern);
         LocalDateTime time = LocalDateTime.of(2022, 6, 22, 11, 12, 3);
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime time1 = LocalDateTime.of(LocalDate.now(), LocalTime.MIN);
@@ -56,6 +60,12 @@ public class DateOne {
         LocalDateTime localDateTime = new Date().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
         Date date = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
 
+        // LocalDateTime 转LocalDate
+        LocalDate localDate = localDateTime.toLocalDate();
+        // LocalDate 转LocalDateTime
+        LocalDate localDate1 = LocalDate.now();
+        LocalDateTime dateTime1 = localDate1.atStartOfDay();
+
         // 比较先后
         boolean before = lastDayOfMonth.isBefore(now);
     }
@@ -72,6 +82,13 @@ public class DateOne {
         int value = dayOfWeek.getValue();
         // 获取这月最后一天
         LocalDate lastDay = now.plusMonths(1).minusDays(now.getDayOfMonth());
+
+        LocalDateTime one = LocalDateTime.of(1993, 12, 1, 10, 9, 1);
+        LocalDateTime now1 = LocalDateTime.of(1993,12,1,20,0,1);
+        Duration between = Duration.between(one, now1);
+        System.out.println(between.toDays());
+        DateTimeFormatter pattern = DateTimeFormatter.ofPattern("yyyyMMdd");
+        LocalDate parse = LocalDate.parse("20211115", pattern);
+        System.out.println(parse.atStartOfDay());
     }
 }
-
