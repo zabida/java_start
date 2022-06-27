@@ -7,6 +7,9 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
+import java.net.Inet4Address;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Properties;
@@ -15,6 +18,13 @@ import java.util.Properties;
 @Slf4j
 public class CustomConsumer {
     public static void main(String[] args) {
+        try {
+            InetAddress localHost = InetAddress.getLocalHost();
+            String hostAddress = localHost.getHostAddress();
+            System.out.println(hostAddress);
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
         Properties properties = new Properties();
         properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "mac170:9092");
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
