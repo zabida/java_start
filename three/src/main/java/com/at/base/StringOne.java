@@ -97,8 +97,10 @@ public class StringOne {
 
         System.out.println("_________________");
         one.scannerFile(rPath);
+        String s1 = String.format("ajksjaks'%s'", null);
+        System.out.println(s1);
     }
-    public void compare(){
+    public void compare() throws UnsupportedEncodingException {
         String str8 = "";
         long freeMemory = Runtime.getRuntime().freeMemory();  // 获取当前系统剩余内存
         long now = System.currentTimeMillis();
@@ -119,5 +121,9 @@ public class StringOne {
         long freeMemory3 = Runtime.getRuntime().freeMemory();
         long l = freeMemory3 - freeMemory2;
         System.out.println("使用内存" + l);
+
+        // 编码 解码
+        String s = new String("asn傲风".getBytes(StandardCharsets.UTF_8), "GBK");
+
     }
 }
