@@ -74,6 +74,14 @@ public class CollectionTwo {
         System.out.println(collectMap2);
     }
 
+    public void hashSet(){
+        HashSet<String> set = new HashSet<>();
+        set.add("1");
+        set.add("1");
+        HashSet<String> strings = new HashSet<>(Arrays.asList("1", "2", "1"));
+        System.out.println(strings);
+    }
+
     public static void main(String[] args) {
         CollectionTwo two = new CollectionTwo();
         two.collect();
@@ -84,5 +92,7 @@ public class CollectionTwo {
         two.collectReduce();
         System.out.println("---------------collectMap");
         two.collectMap();
+        System.out.println("---------------hashSet");
+        two.hashSet();
     }
 }
