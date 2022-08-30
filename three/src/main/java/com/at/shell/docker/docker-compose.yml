@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  dex:
+    image: dex:1.0      # 设置镜像名
+    build:
+      context: ./dex    # 将扫描此目录找Dockerfile，进行构建
+      #dockerfile: dex.Dockerfile    # 备选的dockerfile文件
+      args:                   # 传入ARGS
+        port: 5000
+    ports:
+      - "8000:5000"
+      - "8100:5100"
+    volumes:
+      - .:/code
+    environment:
+      PART: dex          # 设置环境变量
+    container_name: dex    # 容器名称
+  daep:
+    image: dev:1.0
+    build:
+      context: ./daep
+      #dockerfile: daep.Dockerfile
+    ports:
+      - "8001:6000"
+    volumes:
+      - .:/code
+    environment:
+      PART: daepkk
+    container_name: daep
