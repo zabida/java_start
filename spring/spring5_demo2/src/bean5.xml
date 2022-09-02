@@ -2,10 +2,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <!--    自动装配，byName，属性需要与id名一样-->
+    <!--    自动装配，byName，属性需要与id名一样, 还有一个dept属性自动装配上了 -->
     <bean id="empt" class="com.atguigu.spring5.autowire.Empt" autowire="byName">
         <property name="name" value="hehe"/>
     </bean>
+
     <bean id="dept" class="com.atguigu.spring5.autowire.Dept">
         <property name="name" value="研发部"/>
         <property name="nu" value="12"/>
