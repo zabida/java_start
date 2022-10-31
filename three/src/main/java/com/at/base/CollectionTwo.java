@@ -1,5 +1,6 @@
 package com.at.base;
 
+import com.at.base.pclass.Account;
 import com.at.base.pclass.Car;
 
 import java.util.*;
@@ -82,6 +83,26 @@ public class CollectionTwo {
         System.out.println(strings);
     }
 
+    public void sort1(){
+        Account a = new Account(100, "a");
+        Account b = new Account(80, "b");
+        Account c = new Account(120, "c");
+        Account d = new Account(70, "d");
+        Account e = new Account(80, "a");
+        List<Account> accounts = Arrays.asList(a, b, c, d, e);
+        accounts.sort(Comparator.comparing(Account::getMoney).reversed());
+        System.out.println(accounts);
+
+        Comparator<Account> sortByMoney = (Account t1, Account t2) -> (t2.getMoney() - t1.getMoney()) ;
+        List<Account> accounts2 = Arrays.asList(a, b, c, d, e);
+        accounts2.sort(sortByMoney);
+        System.out.println(accounts2);
+
+        Stream<Account> sorted = Stream.of(a, b, c, d, e).sorted(Comparator.comparing(Account::getMoney).reversed().thenComparing(Account::getAname));
+        List<Account> collect = sorted.collect(Collectors.toList());
+        System.out.println(collect);
+    }
+
     public static void main(String[] args) {
         CollectionTwo two = new CollectionTwo();
         two.collect();
@@ -94,5 +115,12 @@ public class CollectionTwo {
         two.collectMap();
         System.out.println("---------------hashSet");
         two.hashSet();
+        Account ccc = new Account(100, "ccc");
+        Account ddd = new Account(200, "ddd");
+        Account eee = new Account(null, "eee");
+        List<Account> list = Arrays.asList(ccc, ddd, eee);
+//        long sum = list.stream().mapToLong(Account::getMoney).sum();
+//        System.out.println(sum);
+        two.sort1();
     }
 }
