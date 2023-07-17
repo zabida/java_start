@@ -13,5 +13,8 @@ public class StringTwo {
         String s = Arrays.toString(encode);
         System.out.println(a);
         System.out.println(s1);
+        Long b = null;
+        boolean b1 = b.equals(1L);
+        System.out.println(b1);
     }
 }

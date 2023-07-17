@@ -26,10 +26,10 @@ public class CustomConsumer {
             e.printStackTrace();
         }
         Properties properties = new Properties();
-        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "mac170:9092");
+        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "221.228.208.182:8002");
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-        properties.put(ConsumerConfig.GROUP_ID_CONFIG, "test");
+        properties.put(ConsumerConfig.GROUP_ID_CONFIG, "das");
 
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties);
         ArrayList<String> topics = new ArrayList<>();

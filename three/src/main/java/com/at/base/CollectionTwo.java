@@ -101,6 +101,11 @@ public class CollectionTwo {
         Stream<Account> sorted = Stream.of(a, b, c, d, e).sorted(Comparator.comparing(Account::getMoney).reversed().thenComparing(Account::getAname));
         List<Account> collect = sorted.collect(Collectors.toList());
         System.out.println(collect);
+        ArrayList<Object> objects = new ArrayList<>();
+        List<Object> list = objects.stream().filter(Objects::nonNull).map(n -> {
+            return n;
+        }).collect(Collectors.toList());
+        System.out.println(list);
     }
 
     public static void main(String[] args) {
@@ -117,10 +122,22 @@ public class CollectionTwo {
         two.hashSet();
         Account ccc = new Account(100, "ccc");
         Account ddd = new Account(200, "ddd");
-        Account eee = new Account(null, "eee");
+        Account eee = new Account(300, "eee");
         List<Account> list = Arrays.asList(ccc, ddd, eee);
-//        long sum = list.stream().mapToLong(Account::getMoney).sum();
-//        System.out.println(sum);
+        long sum = list.stream().mapToLong(Account::getMoney).sum();
+//        ArrayList<Object> list1 = new ArrayList<>();
+//        long sum1 = list1.stream().mapToLong(Account::getMoney).sum();
+//        System.out.println(sum1);
         two.sort1();
+        System.out.println(list.size());
+
+        Set<Long> longSet = new HashSet<Long>();
+        longSet.add(1L);
+        longSet.add(1L);
+        List<Integer> asList = Arrays.asList(1, 1, 1, 1, 2);
+        HashSet<Long> hashSet = new HashSet<>();
+        hashSet.add(1L);
+        System.out.println(hashSet);;
+
     }
 }

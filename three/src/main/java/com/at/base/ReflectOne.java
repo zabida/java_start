@@ -3,6 +3,8 @@ package com.at.base;
 import lombok.Data;
 
 import java.lang.annotation.ElementType;
+import java.lang.reflect.Field;
+import java.util.HashMap;
 
 
 @Data
@@ -41,5 +43,26 @@ public class ReflectOne {
         Class<Class> aClass12 = Class.class;
 
         Student o = (Student) aClass.newInstance();
+
+        o.age = 12;
+        o.sex = "nan";
+        System.out.println(o);
+        HashMap<String, Field> map = new HashMap<>();
+
+        Field[] fields = o.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            map.put(field.getName(), field);
+        }
+
+        Field age = map.get("age");
+        int i = (int) age.get(o);
+        System.out.println(i);
+
+        for (Field field : Student.class.getDeclaredFields()) {
+            map.put(field.getName(), field);
+        }
+        Field sex = map.get("sex");
+        String s = (String) sex.get(o);
+        System.out.println(s);
     }
 }

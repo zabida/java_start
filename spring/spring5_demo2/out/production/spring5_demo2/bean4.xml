@@ -2,10 +2,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="orders" class="com.atguigu.spring5.bean.Orders" init-method="initMethod" destroy-method="destroyMethod">
+    <bean id="orders" class="com.atguigu.spring5.bean.Orders" autowire="byName" init-method="initMethod" destroy-method="destroyMethod">
         <property name="orderName" value="测试订单"/>
     </bean>
 
+    <bean id="book" class="com.atguigu.spring5.collections.Book">
+        <property name="name" value="4书籍"/>
+    </bean>
     <!-- 配置后置处理器， 本xml里的bean都可以用这个后置处理器-->
     <bean id="myBeanPost" class="com.atguigu.spring5.bean.MyBeanPost"/>
 </beans>
