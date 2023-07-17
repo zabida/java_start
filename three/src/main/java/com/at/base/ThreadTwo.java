@@ -42,4 +42,5 @@ public class ThreadTwo extends Thread{
         // 加了线程同步，类似python线程加锁
         // 未加线程同步的，同时扣取了2次钱, 前面的 校验没挡住
     }
+
 }
