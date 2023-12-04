@@ -1,5 +1,6 @@
 package com.at.base;
 
+import com.chinadep.common.util.AESUtil;
 import com.sun.deploy.util.ArrayUtil;
 
 import java.util.*;
@@ -93,6 +94,9 @@ public class CollectionOne {
 //        Comparator<String> sortByName = String::compareTo;
         Arrays.sort(players, sortByName);
         System.out.println(Arrays.toString(players));
+        List<String> list = Arrays.asList(players);
+        List<String> strings1 = list.subList(0, 10);
+        System.out.println(strings1);
 
     }
 }

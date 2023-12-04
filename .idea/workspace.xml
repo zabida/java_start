@@ -3,24 +3,33 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1546186d-403d-47df-96d2-e4d1940009d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/springbootsecurity/src/main/java/com/zabida/springbootsecurity/Dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springbootsecurity/src/main/java/com/zabida/springbootsecurity/model/PermissionDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springbootsecurity/src/main/java/com/zabida/springbootsecurity/service/SpringDataUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springbootsecurity/src/main/webapp/WEB-INF/views/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springbootsecurity/src/test/java/com/zabida/springbootsecurity/BCTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring/spring5_demo1/spring5_demo1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring5_demo1/spring5_demo1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/spring5_demo2/out/production/spring5_demo2/bean4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring5_demo2/out/production/spring5_demo2/bean4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring/spring5_demo2/spring5_demo2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring5_demo2/spring5_demo2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/spring5_demo3/out/production/spring5_demo3/bean1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring5_demo3/out/production/spring5_demo3/bean1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring/spring5_demo3/spring5_demo3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring5_demo3/spring5_demo3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring/spring5_demo4/out/production/spring5_demo4/bean1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring5_demo4/out/production/spring5_demo4/bean1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring/spring5_demo4/spring5_demo4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring5_demo4/spring5_demo4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/spring5_demo5/spring5_demo5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring5_demo5/spring5_demo5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springbootsecurity/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springbootsecurity/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springbootsecurity/src/main/java/com/zabida/springbootsecurity/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springbootsecurity/src/main/java/com/zabida/springbootsecurity/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springbootsecurity/src/main/java/com/zabida/springbootsecurity/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springbootsecurity/src/main/java/com/zabida/springbootsecurity/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springbootsecurity/src/main/java/com/zabida/springbootsecurity/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springbootsecurity/src/main/java/com/zabida/springbootsecurity/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springbootsecurity/src/main/java/com/zabida/springbootsecurity/model/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/springbootsecurity/src/main/java/com/zabida/springbootsecurity/model/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springbootsecurity/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springbootsecurity/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +38,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -52,7 +64,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../javastart" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/three" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -65,6 +78,7 @@
       <updated>1646627438354</updated>
       <workItem from="1646627439945" duration="2449000" />
       <workItem from="1646900804706" duration="943000" />
+      <workItem from="1666775253318" duration="45000" />
     </task>
     <servers />
   </component>
@@ -82,5 +96,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="565" y="260" key="FileChooserDialogImpl" timestamp="1666775296493">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="565" y="260" key="FileChooserDialogImpl/142.1080.1728.1120/0.0.1920.1040@0.0.1920.1040" timestamp="1666775296493" />
   </component>
 </project>

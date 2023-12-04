@@ -21,7 +21,7 @@ public class DateOne {
         // 字符串转对象
         String dateStr = "2022-06-08";
         SimpleDateFormat formatter2 = new SimpleDateFormat("yyyy-MM-dd");
-        formatter2.parse(dateStr);
+        Date parse1 = formatter2.parse(dateStr);
         // 一年多少天
         SimpleDateFormat format = new SimpleDateFormat("D");
         System.out.println(format.format(new Date()));  // 当前第多少天
