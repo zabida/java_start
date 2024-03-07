@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 public class Pet {
     Pet(String name) {
     }
-    public Pet() {}
+    Pet() {}
 
     @MyAnno3(className = "com.atguigu.boot.User", methodName = "fun")
     public void sound(String a) throws NoSuchMethodException {

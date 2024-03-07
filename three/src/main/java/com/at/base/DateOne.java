@@ -21,7 +21,7 @@ public class DateOne {
         // 字符串转对象
         String dateStr = "2022-06-08";
         SimpleDateFormat formatter2 = new SimpleDateFormat("yyyy-MM-dd");
-        Date parse1 = formatter2.parse(dateStr);
+        formatter2.parse(dateStr);
         // 一年多少天
         SimpleDateFormat format = new SimpleDateFormat("D");
         System.out.println(format.format(new Date()));  // 当前第多少天
@@ -84,7 +84,7 @@ public class DateOne {
         LocalDate lastDay = now.plusMonths(1).minusDays(now.getDayOfMonth());
 
         LocalDateTime one = LocalDateTime.of(1993, 12, 1, 10, 9, 1);
-        LocalDateTime now1 = LocalDateTime.of(1993,11,10,20,0,1);
+        LocalDateTime now1 = LocalDateTime.of(1993,12,1,20,0,1);
         Duration between = Duration.between(one, now1);
         System.out.println(between.toDays());
         DateTimeFormatter pattern = DateTimeFormatter.ofPattern("yyyyMMdd");

@@ -3,9 +3,8 @@ package com.zabida.springbootsecurity.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class LoginController {
     @PostMapping(value = "/login-success", produces = {"text/plain;charset=utf8"})
     public String loginSuccess() {

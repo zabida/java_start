@@ -1,7 +1,5 @@
 package test;
 
-import com.alibaba.druid.pool.DruidDataSource;
-import com.alibaba.druid.pool.DruidPooledConnection;
 import com.atguigu.spring5.autowire.Empt;
 import com.atguigu.spring5.bean.Orders;
 import com.atguigu.spring5.collections.Course;
@@ -9,8 +7,6 @@ import com.atguigu.spring5.collections.Stu;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.sql.SQLException;
 
 public class TestCollections {
     @Test
@@ -57,14 +53,5 @@ public class TestCollections {
         empt.test();
         // 手动销毁
         context.close();
-    }
-
-    @Test
-    public void test6() throws SQLException {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("bean6.xml");
-        System.out.println("!!!!!! context生成");
-        DruidDataSource dataSource = context.getBean("dataSource", DruidDataSource.class);
-        DruidPooledConnection connection = dataSource.getConnection();
-        System.out.println(connection.toString());
     }
 }
