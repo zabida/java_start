@@ -1,6 +1,7 @@
 package com.at.tool;
 
 
+import cn.hutool.json.JSONUtil;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +32,10 @@ import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -50,15 +54,16 @@ public class HttpClientUtils {
 
     private static final String JSON_CONTENT_TYPE = "application/json";
 
+    // 这个配置了ssl免认证，httpclient.setSSLSocketFactory。里面配置了不安全ssl也可以访问
     static {
         SSLContextBuilder builder = new SSLContextBuilder();
         try {
-//            builder.loadTrustMaterial(null, new TrustStrategy() {
-//                @Override
-//                public boolean isTrusted(X509Certificate[] x509Certificates, String s) throws CertificateException {
-//                    return true;
-//                }
-//            });
+           // builder.loadTrustMaterial(null, new TrustStrategy() {
+           //     @Override
+           //     public boolean isTrusted(X509Certificate[] x509Certificates, String s) throws CertificateException {
+           //         return true;
+           //     }
+           // });
             builder.loadTrustMaterial(null, (x509Certificates, s) -> true);
         } catch (NoSuchAlgorithmException | KeyStoreException e) {
             throw new RuntimeException(e);
@@ -165,9 +170,26 @@ public class HttpClientUtils {
         return execute(method, charset);
     }
 
-    public static void main(String[] args) {
-        HttpGet httpGet = new HttpGet("http://test.data.sh.gov.cn/zq/api/data_set/count/");
-        String execute = execute(httpGet, DEFAULT_CHARSET);
-        System.out.println(execute);
+    public static void main(String[] args) throws JsonProcessingException {
+        // HttpGet httpGet = new HttpGet("https://test.data.sh.gov.cn/zq/api/data_set/count/");
+        // String execute = execute(httpGet, DEFAULT_CHARSET);
+        // System.out.println(execute);
+
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("taskNo", "xxx");
+        hashMap.put("supDid", "xxxx");
+        hashMap.put("demDid", "xxxxx");
+        hashMap.put("applyId", "1xxx");
+        HashMap<String, String> otherMap = new HashMap<>();
+
+        LocalDate plusDays = LocalDate.now().plusDays(365);
+        String expDate = plusDays.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        otherMap.put("expiryDate", expDate);
+        otherMap.put("reason", ".");
+        String otherStr = JSONUtil.toJsonStr(otherMap);
+        hashMap.put("otherInfo", otherStr);
+
+        String s = postJson("https://192.168.110.39:31849/api/v1/consumer/taskticket/remote/create", hashMap);
+        System.out.println(s);
     }
 }
