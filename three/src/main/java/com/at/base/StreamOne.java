@@ -1,11 +1,11 @@
 package com.at.base;
 
+import com.at.base.pclass.Car;
+
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class StreamOne {
 
@@ -132,5 +132,8 @@ public class StreamOne {
 //        read2();
 //        read3();
         byesArrayInputString();
+        ArrayList<Car> cars = new ArrayList<>();
+        List<Car> collect = cars.stream().sorted(Comparator.comparing(Car::getEngine).reversed()).collect(Collectors.toList());
+        System.out.println(collect);
     }
 }

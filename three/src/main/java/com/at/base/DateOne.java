@@ -14,10 +14,11 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class DateOne {
-    public void trans() throws ParseException {
+    public static void trans() throws ParseException {
         // 时间对象转字符串
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss'Z'");
         String s = formatter.format(new Date());
+        System.out.println(s);
         // 字符串转对象
         String dateStr = "2022-06-08";
         SimpleDateFormat formatter2 = new SimpleDateFormat("yyyy-MM-dd");
@@ -69,7 +70,7 @@ public class DateOne {
         // 比较先后
         boolean before = lastDayOfMonth.isBefore(now);
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         // LocalDate类 类似日历，可以提供很多功能
         LocalDate date = LocalDate.of(1993, 12, 1);
         LocalDate now = LocalDate.now();
@@ -86,9 +87,12 @@ public class DateOne {
         LocalDateTime one = LocalDateTime.of(1993, 12, 1, 10, 9, 1);
         LocalDateTime now1 = LocalDateTime.of(1993,12,1,20,0,1);
         Duration between = Duration.between(one, now1);
-        System.out.println(between.toDays());
+        System.out.println("1 " + between.toDays());
         DateTimeFormatter pattern = DateTimeFormatter.ofPattern("yyyyMMdd");
         LocalDate parse = LocalDate.parse("20211115", pattern);
-        System.out.println(parse.atStartOfDay());
+        System.out.println("2 " + parse.atStartOfDay());
+
+        System.out.println("3 " + new Date());
+        DateOne.trans();
     }
 }

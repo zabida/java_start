@@ -1,6 +1,5 @@
-package com.at.base;
+package com.at.tool;
 
-import javafx.beans.property.adapter.JavaBeanBooleanPropertyBuilder;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -20,17 +19,15 @@ import org.apache.http.util.EntityUtils;
 
 import javax.net.ssl.SSLContext;
 import java.nio.charset.StandardCharsets;
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 
-public class HttpClientUtils {
+public class HttpClientUtils2 {
 
     public static void main(String[] args) throws Exception {
         Registry<ConnectionSocketFactory> reg = RegistryBuilder.<ConnectionSocketFactory>create()
                 .register("http", PlainConnectionSocketFactory.INSTANCE)
-                .register("https", HttpClientUtils.trustHttpsCertificates()).build();
+                .register("https", HttpClientUtils2.trustHttpsCertificates()).build();
         // 创建connectionManager
         PoolingHttpClientConnectionManager pool = new PoolingHttpClientConnectionManager(reg);
         HttpClientBuilder httpClientBuilder = HttpClients.custom().setConnectionManager(pool);

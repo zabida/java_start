@@ -22,14 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1546186d-403d-47df-96d2-e4d1940009d2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/spring/spring5_demo1/spring5_demo1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring5_demo1/spring5_demo1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/spring5_demo2/out/production/spring5_demo2/bean4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring5_demo2/out/production/spring5_demo2/bean4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/spring5_demo2/spring5_demo2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring5_demo2/spring5_demo2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/spring5_demo3/out/production/spring5_demo3/bean1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring5_demo3/out/production/spring5_demo3/bean1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/spring5_demo3/spring5_demo3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring5_demo3/spring5_demo3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/spring5_demo4/out/production/spring5_demo4/bean1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring5_demo4/out/production/spring5_demo4/bean1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/spring5_demo4/spring5_demo4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring/spring5_demo4/spring5_demo4.iml" afterDir="false" />
+    <list default="true" id="1546186d-403d-47df-96d2-e4d1940009d2" name="Changes" comment="完善">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,14 +55,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/three" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/code/java_start",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -79,7 +75,17 @@
       <workItem from="1646627439945" duration="2449000" />
       <workItem from="1646900804706" duration="943000" />
       <workItem from="1666775253318" duration="45000" />
+      <workItem from="1701669716490" duration="184000" />
     </task>
+    <task id="LOCAL-00001" summary="完善">
+      <option name="closed" value="true" />
+      <created>1701669796024</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701669796025</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,12 +101,9 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="565" y="260" key="FileChooserDialogImpl" timestamp="1666775296493">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="565" y="260" key="FileChooserDialogImpl/142.1080.1728.1120/0.0.1920.1040@0.0.1920.1040" timestamp="1666775296493" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善" />
   </component>
 </project>
