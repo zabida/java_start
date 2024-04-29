@@ -14,7 +14,7 @@ public class JwtToken {
     private static final String signKey = "123456";
 
     public static String generalToken() {
-        User user=new User("张三","123", 18);
+        User user=new User("张三","123", 18, null);
         String userJson = JSON.toJSONString(user);//序列化user
         JwtBuilder jwtBuilder = Jwts.builder(); //获得JWT构造器
 //        Map<String,Object> map=new Hashtable<>();
