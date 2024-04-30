@@ -47,6 +47,17 @@ public class JsonAndObj {
         }
     }
 
+    public static <T> T getFromJson(String s, TypeReference<T> typeReference){
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            // 没法直接转成T对象的，泛型在运行时jdk无法知道其类型。所以转出来的是默认的LinkedHashMap。想转成具体的类型，需要在使用的时候再传入具体的类型，convert成具体对象
+            // 在用的时候再指定好typeReference传进来
+            return objectMapper.readValue(s, typeReference);
+        } catch (IOException e){
+            throw new RuntimeException();
+        }
+    }
+
     // public static <T> T getFromJson2(String str){
         // return JSON.parseObject(str, T.class);  // 这种的为啥不行,泛型在运行时无法知道类型，这种写法不对的
     // }
