@@ -99,6 +99,10 @@ public class StringOne {
         one.scannerFile(rPath);
         String s1 = String.format("ajksjaks'%s'", null);
         System.out.println(s1);
+
+        String aa = "asaAss123A阿萨";
+        String upperCase = aa.toUpperCase();
+        System.out.println(upperCase);
     }
     public void compare() throws UnsupportedEncodingException {
         String str8 = "";

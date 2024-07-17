@@ -9,7 +9,7 @@ public class Car {
 
     private String engine;
     private String series;
-    Car(){}
+    public Car(){}
 
     Car(String e, String series){
         this.engine = e;

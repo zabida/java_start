@@ -26,14 +26,14 @@ public class CustomConsumer {
             e.printStackTrace();
         }
         Properties properties = new Properties();
-        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "mac170:9092");
+        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "172.22.99.106:9092");
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         properties.put(ConsumerConfig.GROUP_ID_CONFIG, "test");
 
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties);
         ArrayList<String> topics = new ArrayList<>();
-        topics.add("first");
+        topics.add("uat2-business-platform-company");
         consumer.subscribe(topics);
 
         while (true) {
