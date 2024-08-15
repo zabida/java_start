@@ -2,7 +2,11 @@ package com.ithm.controller;
 
 // REST模式
 
+import cn.hutool.core.bean.BeanUtil;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ithm.MyDatasource;
+import com.ithm.req.TestReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
@@ -52,5 +56,37 @@ public class BookController {
     @RequestMapping(path = "/post", method = RequestMethod.POST)
     public String post(Integer id) {
         return "spring is running, post id is " + id;
+    }
+
+    @RequestMapping(path = "/my", method = RequestMethod.POST)
+    public String post1(@RequestBody TestReq req) {
+        Object one = req.getOne();
+        // ObjectMapper objectMapper = new ObjectMapper();
+        // Map<String, Object> map = objectMapper.convertValue(req.getOne().get(0), new TypeReference<Map<String, Object>>() {});
+        // Object o = map.get("items");
+        // Map<String, Object> map1 = objectMapper.convertValue(o, new TypeReference<Map<String, Object>>() {});
+        // Object o1 = map1.get("properties");
+        // Map<String, Object> map2 = objectMapper.convertValue(o1, new TypeReference<Map<String, Object>>() {});
+        // for (String s : map2.keySet()) {
+        //     Object o2 = map2.get(s);
+        //     Map<String, Object> item = objectMapper.convertValue(o2, new TypeReference<Map<String, Object>>() {});
+        //     String o3 = String.v alueOf(item.get("type"));
+        //     String o4 = String.valueOf(item.get("title"));
+        //     System.out.println(o2 + o3 + o4);
+        // }
+        Map<String, Object> map = BeanUtil.beanToMap(one);
+        Object o = map.get("items");
+        Map<String, Object> map1 = BeanUtil.beanToMap(o);
+        Object o1 = map1.get("properties");
+        Map<String, Object> map2 = BeanUtil.beanToMap(o1);
+        for (String s : map2.keySet()) {
+            Object o2 = map2.get(s);
+            Map<String, Object> item = BeanUtil.beanToMap(o2);
+            String o3 = String.valueOf(item.get("type"));
+            String o4 = String.valueOf(item.get("title"));
+            System.out.println(o2 + o3 + o4);
+        }
+
+        return null;
     }
 }

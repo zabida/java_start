@@ -1,4 +1,4 @@
-package com.atguigu.boot.enums;
+package com.atguigu.boot.modules.my.enums;
 
 import lombok.AllArgsConstructor;
         import lombok.Getter;
