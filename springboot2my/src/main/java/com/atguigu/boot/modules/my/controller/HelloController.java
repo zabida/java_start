@@ -34,4 +34,10 @@ public class HelloController {
         return excelHandleService.readeExcelByEasy(file, type);
     }
 
+    @PostMapping("/upload3")
+    public String upload3(@RequestParam(value = "file") MultipartFile file,
+                          @RequestParam(value = "type") String type) throws Exception {
+        return excelHandleService.readeExcelByEasy2(file, type);
+    }
+
 }

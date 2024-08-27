@@ -8,4 +8,6 @@ public interface ExcelHandleService {
     HashMap<String, Integer> readeExcel(MultipartFile file) throws Exception;
 
     String readeExcelByEasy(MultipartFile file, String type) throws Exception;
+
+    String readeExcelByEasy2(MultipartFile file, String type);
 }

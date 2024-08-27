@@ -13,10 +13,13 @@ import cn.hutool.json.JSONUtil;
 import cn.hutool.poi.excel.sax.ExcelSaxUtil;
 import com.atguigu.boot.modules.my.enums.CellTypeEnum;
 import com.atguigu.boot.modules.my.req.MyExcelReq;
+import com.atguigu.boot.modules.my.resp.RegistrationTemplateProcessVersion2Resp;
 import com.atguigu.boot.modules.my.service.ExcelHandleService;
 import com.atguigu.boot.modules.my.req.ImportDataSetParamReq;
+import com.atguigu.boot.modules.my.utils.EasyPoiUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -29,6 +32,9 @@ import java.util.*;
 @Service
 @Slf4j
 public class ExcelHandleServiceImpl implements ExcelHandleService {
+    @Autowired
+    EasyPoiUtil easyPoiUtil;
+
     @Override
     public HashMap<String, Integer> readeExcel(MultipartFile file) throws Exception {
         if (file == null ) {
@@ -142,5 +148,15 @@ public class ExcelHandleServiceImpl implements ExcelHandleService {
             }
         }
         return JSONUtil.toJsonStr(resultDataSet);
+    }
+
+    @Override
+    public String readeExcelByEasy2(MultipartFile file, String type) {
+        try{
+            RegistrationTemplateProcessVersion2Resp resp = easyPoiUtil.analysisRegistrationTemplateProcessVersion2(file);
+        } catch (Exception e){
+            log.error("异常", e);
+        }
+        return "123";
     }
 }
