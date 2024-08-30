@@ -11,7 +11,12 @@ import lombok.NonNull;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Account {
+
     @NonNull
     public Integer money;
     public String aname;
+
+    public static Account getOne(String userName){
+        return new Account(100, userName);
+    }
 }
